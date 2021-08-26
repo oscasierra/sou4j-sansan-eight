@@ -9,15 +9,23 @@ import com.orangesignal.csv.handlers.ColumnPositionMappingBeanListHandler;
  */
 abstract class CardCSVFileLoader {
 
-	protected CsvConfig getCsvConfig() {
+	protected CsvConfig getCsvForFullNameConfig() {
 		CsvConfig config = new CsvConfig();
 		config.setQuoteDisabled(false);
 		config.setIgnoreEmptyLines(true);
 		config.setSkipLines(8);
 		return config;
 	}
+	
+	protected CsvConfig getCsvConfig() {
+		CsvConfig config = new CsvConfig();
+		config.setQuoteDisabled(false);
+		config.setIgnoreEmptyLines(true);
+		config.setSkipLines(1);
+		return config;
+	}
 
-	protected ColumnPositionMappingBeanListHandler<CardCsvFileRecord> getColumnPositionMappingBeanListHandler() {
+	protected ColumnPositionMappingBeanListHandler<CardCsvFileRecord> getColumnPositionMappingForFullNameBeanListHandler() {
 		return new ColumnPositionMappingBeanListHandler<CardCsvFileRecord>(CardCsvFileRecord.class)
 			.addColumn( 0, "companyName")
 			.addColumn( 1, "department")
@@ -34,5 +42,25 @@ abstract class CardCSVFileLoader {
 			.addColumn(12, "url")
 			.addColumn(13, "tradingDate")
 			.addColumn(14, "linked");
+	}
+	
+	protected ColumnPositionMappingBeanListHandler<CardCsvFileRecord> getColumnPositionMappingBeanListHandler() {
+		return new ColumnPositionMappingBeanListHandler<CardCsvFileRecord>(CardCsvFileRecord.class)
+			.addColumn( 0, "companyName")
+			.addColumn( 1, "department")
+			.addColumn( 2, "title")
+			.addColumn( 3, "lastName")
+			.addColumn( 4, "firstName")
+			.addColumn( 5, "email")
+			.addColumn( 6, "postalCode")
+			.addColumn( 7, "address")
+			.addColumn( 8, "companyPhoneNumber")
+			.addColumn( 9, "departmentPhoneNumber")
+			.addColumn(10, "directPhoneNumber")
+			.addColumn(11, "companyFaxNumber")
+			.addColumn(12, "mobilePhoneNumber")
+			.addColumn(13, "url")
+			.addColumn(14, "tradingDate")
+			.addColumn(15, "linked");
 	}
 }

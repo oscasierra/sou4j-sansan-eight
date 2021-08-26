@@ -11,7 +11,7 @@ import jp.sou4j.sansan.eight.util.CardConvertUtils;
 import jp.sou4j.util.Objects;
 
 /**
- * <p>EightからダウンロードできるCSV形式の名刺データファイル(ShiftJIS版)を読み込むためのクラスです。</p>
+ * <p>EightからダウンロードできるCSV形式の名刺データファイル(姓名分割ShiftJIS版)を読み込むためのクラスです。</p>
  * @author OSCA
  */
 public class SjisCardCSVFileLoader extends CardCSVFileLoader {
