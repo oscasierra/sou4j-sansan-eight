@@ -1,0 +1,5 @@
+﻿会社名,部署名,役職,姓,名,e-mail,郵便番号,住所,TEL会社,TEL部門,TEL直通,Fax,携帯電話,URL,名刺交換日,Eightでつながっている人
+株式会社xxxxxxxx,システム部 Engineerグループ,"係長",姓,名,test.test@xxxxxxxxx.com,1234567,東京都xxxxxxxxxxx,03-1234-5678,"03-2234-5678","03-3234-5678",03-4234-4567,"03-5234-5678",http://www.company.com,2016/06/22,1
+株式会社xxxxxxxx,システム部 Engineerグループ,"",,,test.test@xxxxxxxxx.com,1234567,東京都xxxxxxxxxxx,03-1234-5678,"03-2234-5678","03-3234-5678",03-4234-4567,"03-5234-5678",http://www.company.com,2016/06/22,1
+株式会社xxxxxxxx,システム部 Engineerグループ,"",姓,,test.test@xxxxxxxxx.com,1234567,東京都xxxxxxxxxxx,03-1234-5678,"03-2234-5678","03-3234-5678",03-4234-4567,"03-5234-5678",http://www.company.com,2016/06/22,1
+株式会社xxxxxxxx,システム部 Engineerグループ,"",,名,test.test@xxxxxxxxx.com,1234567,東京都xxxxxxxxxxx,03-1234-5678,"03-2234-5678","03-3234-5678",03-4234-4567,"03-5234-5678",http://www.company.com,2016/06/22,1
