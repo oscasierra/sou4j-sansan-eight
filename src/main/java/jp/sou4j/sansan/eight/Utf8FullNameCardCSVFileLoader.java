@@ -11,10 +11,10 @@ import jp.sou4j.sansan.eight.util.CardConvertUtils;
 import jp.sou4j.util.Objects;
 
 /**
- * <p>EightからダウンロードできるCSV形式の名刺データファイル(姓名分割UTF-8版)を読み込むためのクラスです。</p>
+ * <p>EightからダウンロードできるCSV形式の名刺データファイル(フルネームUTF-8版)を読み込むためのクラスです。</p>
  * @author OSCA
  */
-public class Utf8CardCSVFileLoader extends CardCSVFileLoader {
+public class Utf8FullNameCardCSVFileLoader extends CardCSVFileLoader {
 
 	private File file;
 
@@ -22,7 +22,7 @@ public class Utf8CardCSVFileLoader extends CardCSVFileLoader {
 	 * <p>コンストラクタです。 引数で読み込むCSVファイルを指定します。</p>
 	 * @param file 読み込むCSVファイル
 	 */
-	public Utf8CardCSVFileLoader(File file) {
+	public Utf8FullNameCardCSVFileLoader(File file) {
 		Objects.requireNonNull(file, "Method argument 'file' is null.");
 		this.file = file;
 	}
@@ -41,8 +41,8 @@ public class Utf8CardCSVFileLoader extends CardCSVFileLoader {
 	private List<CardCsvFileRecord> loadRecords() throws IOException {
 		List<CardCsvFileRecord> records = Csv.load(
 			this.file,
-			super.getCsvConfig(),
-			super.getColumnPositionMappingBeanListHandler()
+			super.getCsvForFullNameConfig(),
+			super.getColumnPositionMappingForFullNameBeanListHandler()
 		);
 		return records;
 	}

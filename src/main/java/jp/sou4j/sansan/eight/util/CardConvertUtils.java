@@ -22,7 +22,13 @@ public class CardConvertUtils {
 		card.setCompanyName(record.getCompanyName());
 		card.setDepartment(record.getDepartment());
 		card.setTitle(record.getTitle());
-		card.setFullName(record.getFullName());
+		if(record.getFullName() == null) {
+			card.setFullName(record.getLastName() + record.getFirstName());
+		}else {
+			card.setFullName(record.getFullName());
+		}
+		card.setFirstName(record.getFirstName());
+		card.setLastName(record.getLastName());
 		card.setEmail(record.getEmail());
 		card.setPostalCode(record.getPostalCode());
 		card.setAddress(record.getAddress());
